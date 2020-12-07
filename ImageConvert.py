@@ -9,9 +9,9 @@ from ctypes import *
 
 # 加载ImageConvert库
 # 32bit
-ImageConvertdll = OleDLL("./dll/x64/ImageConvert.dll")
+#ImageConvertdll = OleDLL("./dll/x86/ImageConvert.dll")
 # 64bit
-# ImageConvertdll = OleDLL("C:/Program Files/General MVTech/MV Viewer/Application/x64/ImageConvert.dll")
+ImageConvertdll = OleDLL("C:/Program Files/General MVTech/MV Viewer/Application/x64/ImageConvert.dll")
 
 #定义枚举类型
 def enum(**enums):

@@ -537,6 +537,7 @@ def object_detect_0(model,img_size):
 
     isGrab = True
 
+    # i = 0
     while isGrab :
 #=====主动取图
         start = time.time()                   # 计时
@@ -594,6 +595,8 @@ def object_detect_0(model,img_size):
             cvImage = numpy.array(colorByteArray).reshape(imageParams.height, imageParams.width, 3)   # (1024,1280,3)/(H,W,3)
         
         image_tensor = get_infer_image(cvImage,img_size)
+
+        # i+=1
         light_state = 0                                                     # 报警灯状态，0-灭，1-亮
         with torch.no_grad():
             record = detect_0(model,cvImage,image_tensor)                   # 数据接口,record是一个整型列表，其中0=trip,1=bolt,2=no_trip,3=no_bolt

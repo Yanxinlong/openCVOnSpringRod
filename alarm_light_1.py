@@ -1,7 +1,7 @@
 import serial
 import time
 
-ser = serial.Serial('COM10', 9600, timeout=0.5)                        # 设置一个串口对象(继电器)
+ser = serial.Serial('COM13', 9600, timeout=0.5)                        # 设置一个串口对象(继电器)
 
 def alarm_1(light_state):
     if light_state == 1:

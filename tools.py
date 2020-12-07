@@ -40,7 +40,7 @@ def post_processing(det_bbox,x_min,x_max):
     return det_bbox,classes
 
  
-
+# 保存弹跳缺失的图像
 def save_normal(image,camera_id):
     # 输入image是ndarray-3维数组
     if camera_id == 0:

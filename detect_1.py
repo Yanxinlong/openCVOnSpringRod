@@ -7,14 +7,14 @@ from tools import post_processing
 
 #==========设置常量和超参数
 cfg = "cfg/yolov3-tiny.cfg"                      
-weights = "weights/last.pt"       
+weights = "weights/last-w.pt"
 img_size = 512
 device = torch_utils.select_device(device='0')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--names', type=str, default='data/data.names', help='*.names path')
-parser.add_argument('--conf-thres', type=float, default=0.2, help='object confidence threshold')                 # 根据实际情况设置
-parser.add_argument('--iou-thres', type=float, default=0.3, help='IOU threshold for NMS')                        # 根据实际情况设置
+parser.add_argument('--conf-thres', type=float, default=0.26, help='object confidence threshold')                 # 根据实际情况设置
+parser.add_argument('--iou-thres', type=float, default=0.31, help='IOU threshold for NMS')                        # 根据实际情况设置
 parser.add_argument('--classes', nargs='+', type=int, help='filter by class')
 parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
 parser.add_argument('--augment', action='store_true', help='augmented inference')
