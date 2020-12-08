@@ -1,2 +1,0 @@
-yolov3-tiny-1.cfg  用于检测弹条是W型弹条还是三型弹条
-yolov3-tiny-2.cfg  用于检测W型弹条是否丢失
